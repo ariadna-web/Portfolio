@@ -1,0 +1,153 @@
+.sidebar{
+    position: fixed;
+    width: 200px;
+    top: 10px;
+    left: 10px;
+    bottom: 10px;
+    background-color: gray;
+    border-radius: 10%;
+    overflow: auto;
+    z-index: 100;
+    display: flex;
+    padding: 30px 20px;
+    flex-direction: column;
+   
+}
+h1{
+    color: rgb(0, 0, 0);
+    font-size: 30px;
+}
+h2{
+    color: rgb(0, 0, 0);
+    font-size: 18px;
+}
+
+.contact{
+    display: flex;
+    flex-direction: column;
+    color:rgb(0, 0, 0);
+
+}
+.menu{
+    position: relative;
+    color:rgb(0, 0, 0);
+    font-size: 20px;
+}
+.contact-me{
+    position: relative;
+    font-size: 20px;
+}
+.contact-me-2{
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    position: absolute;
+    top:50%;
+    left:10px;
+    color: transparent;
+    right: 30px;
+    font-size: 25px;
+}
+.contact-me:hover .contact-me-2{
+    top:100%;
+    opacity: 1;
+    pointer-events: all;
+}
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+#project{
+    padding:  0 0 100px 0;
+    text-align: center;
+ 
+}
+#project{
+    display: grid;
+    grid-template-columns:  repeat(4, 1fr);
+    gap: 50px;
+    
+}
+
+.jobs{
+    text-align: center;
+    box-shadow:  0 0 20px rgba( 0,0,0,0.1);
+    padding: 35px;
+    
+}
+.jobs img{
+    width: 150px;
+    height: 130px;
+    margin-bottom:10px;
+}
+
+.jobs h3{
+    color: var(--7);
+}
+.texto-encima{
+    font-size: 15px;
+    margin: 0;
+    color: var(--7);
+    font-weight: 600;
+}
+
+
+
+
+
+
+
+
+
+#project{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+   
+}
+#proyectos{
+   min-height: 20vh;
+    font-size: 3rem;
+    text-shadow: 0 0 20px var(--5);
+}
+
+.project-img{
+    width: 100%;
+    width: 259px;
+    height: auto;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+     box-shadow:0 0 10px var(--1);
+}
+.jobs{
+    background-color:var(--4);
+    border-radius: 16px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

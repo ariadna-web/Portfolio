@@ -1,0 +1,286 @@
+
+/*:root{
+    --1: rgb(33, 5, 51);
+    --2:rgb(153, 159, 175);
+    --3:rgb(205, 177, 221);
+    --4:rgb(127, 108, 138);
+    --5:rgb(86, 192, 253);
+    --6:rgb(18, 110, 87);
+    --7: black;
+    --8:white;
+    --9:rgb(0, 0, 0);
+    --10: rgb(181, 184, 192);
+}*/
+:root{
+  --1: rgb(46, 12, 82);       /* Sombra violeta profunda */
+  --2: rgb(11, 18, 45);       /* Azul espacial oscuro */
+  --3: rgb(45, 177, 100);    /* Lavanda brillante (para acentos) */
+  --4: rgb(21, 212, 139);     /* Turquesa galaxia */
+  --5: rgb(127, 173, 138);    /* Dorado estrella */
+  --6: rgb(0, 0, 0);      /* Verde menta luminosa para text-shadow */
+  --7: #e4d3d3;               /* Negro para textos o sombras */
+  --8: #ffffff;               /* Blanco puro para texto principal */
+  --9: rgb(212, 212, 240);    /* Blanco azulado (texto secundario) */
+  --10: rgba(96, 219, 182, 0.08); /* Fondo sutil para tarjetas o botones */
+}
+
+
+
+body{
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: var(--8);
+   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),url(/imagenes/fondito.jpeg);
+  
+}
+
+header h2{
+    display: flex;
+    justify-content: left;
+    align-items: left;
+    font-size: 5rem;
+    color: var(--9);
+    letter-spacing: 2px;
+     text-shadow: 0 0 20px var(--6);
+     margin-left: 400px;
+     margin-top: 100px;
+    
+}
+
+/*aside*/
+.sidebar{
+    color: var(--8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: fixed;
+    background: linear-gradient(to right, var(--10)90%, transparent 100%);
+   justify-content: center;
+    width: 300px;
+    top: 0%;
+    bottom: 2%;
+    left: 0%;
+    padding: 20px 0;
+    gap: 15px;
+
+}
+.foto{
+     width: 160px;
+    height: auto;
+    margin: 10px;
+    border-radius: 16%;
+    display: flex;
+    box-shadow: 0 0 6px var(--4);
+}#yo{
+    text-align: center;
+    font-size: 20px;
+    text-shadow: 0 0 2px var(--4);
+    color: var(--9);
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+.sidebar-menu{
+    display: flex;
+    flex-direction: column;
+   
+}
+.menu-side{
+   background-color: var(--5);
+    font-size: 20px;
+    margin-top: 5px;
+    padding: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 150px;
+    height: 50px;
+    box-shadow: 0 0 4px var(--2);
+    gap: 15px;
+    flex-grow: 1;
+    color: var(6);
+    
+}
+
+.menu-side:hover{
+    background-color: var(--3);
+}
+.menu-side:active{
+    background-color: var(--4);
+}
+.menu-side a{
+    color: var(--2);
+    text-decoration: none;
+    gap: 15px;
+    flex-grow: 1;
+}
+/*main*/
+.main{
+   color: var(--9);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-left: 320px; 
+    width: calc(100% - 320px); 
+    align-items: center;
+}
+.yo{
+    min-height: 50vh;
+}
+#text{
+    font-size: 8rem;
+    margin-left: 90px;
+    font-weight: bold;
+    border-right: none;
+    padding-right: 5px;
+    animation: blink 0.8s step-end infinite, fade 1s ease-in-out;
+      color: var(--9);
+    letter-spacing: 2px;
+     text-shadow: 0 0 20px var(--6);
+     margin-bottom: 200px;
+}
+@keyframes blink{
+    50% {border-color: transparent;}
+}
+@keyframes fade{
+    0%{opacity: 0; transform: translateY(10px);}
+    100%{opacity: 1; transform:  translateY(0);}
+}
+
+#contact h3{
+    color: var(--9);  
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2.5rem;
+    text-shadow: 0 0 20px var(--6);
+    
+}
+
+.contacto{
+    color: var(--9);  
+    font-size: 2.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    margin-top: 4px;
+    display: flex;
+    justify-content: left;
+    text-decoration: none; 
+    text-shadow: 0 0 20px var(--6);
+}
+.contacto a{
+    color: var(--4);
+    text-decoration: none;
+}
+#contact a{
+    color: var(--5);
+    font-size: 35px;
+}
+.contact{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 25px;
+     text-shadow: 0 0 20px var(--6);
+     
+    min-height: 15vh;
+    margin-bottom: 40px;
+}
+.contact a{
+    color: var(--3);
+     font-size: 25px;
+     text-decoration: none;
+}
+#project{
+      display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    
+}
+#proyectos{
+   min-height: 20vh;
+    font-size: 3rem;
+    text-shadow: 0 0 20px var(--5);
+}
+
+.jobs{
+    text-align: center;
+    box-shadow:  0 0 20px rgba( 0,0,0,0.1);
+    padding: 30px;
+    background-color: var(--10);
+    border-radius: 16px;
+}
+.jobs img{
+    width: auto;
+    height: 170px;
+    margin-bottom:10px;
+}
+
+.jobs h3{
+    color: var(--7);
+}
+.texto-encima{
+    font-size: 15px;
+    margin: 0;
+    color: var(--7);
+    font-weight: 600;
+}
+
+.encant{
+    font-size: 18px;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 0 0 14px var(--1);
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    flex-grow: 1;
+   
+}
+#about-me, #skills, #studies{
+    color: var(--9);
+    width: 100%;
+    max-width: 900px;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 1rem;
+     min-height: 20vh;
+}
+.sub-title{
+font-size: 2.5rem;
+    text-shadow: 0 0 20px var(--6);
+}
+
+.estudios{
+     box-shadow:  0 0 20px rgba( 0,0,0,0.1);
+    padding: 25px;
+    background-color: var(--10);
+    margin-right: 240px;
+    flex-direction: row;
+}
+.estudios h2{
+    font-size: 1.5rem;
+}
+
+#skills{
+     box-shadow:  0 0 20px rgba( 0,0,0,0.1);
+     margin-top: 50px;
+    padding: 20px;
+    background-color: var(--10);
+    border-radius: 16px;
+    font-size: 1.3rem;
+}
+#skills h3{
+     text-shadow:  0 0 20px rgba( 0,0,0,0.1);
+}
+
+
