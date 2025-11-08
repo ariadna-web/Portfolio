@@ -72,9 +72,10 @@ header h2{
     border-radius: 16%;
     display: flex;
     box-shadow: 0 0 6px var(--4);
+    margin-top: 5%;
 }#yo{
     text-align: center;
-    font-size: 20px;
+    font-size: 17px;
     text-shadow: 0 0 2px var(--4);
     color: var(--9);
     font-family:Georgia, 'Times New Roman', Times, serif;
@@ -86,8 +87,8 @@ header h2{
 }
 .menu-side{
    background-color: var(--5);
-    font-size: 20px;
-    margin-top: 5px;
+    font-size: 18px;
+    margin-top: 2px;
     padding: 20px;
     border-radius: 5px;
     cursor: pointer;
@@ -114,6 +115,9 @@ header h2{
     text-decoration: none;
     gap: 15px;
     flex-grow: 1;
+}
+.navbar{
+    display: none;
 }
 /*main*/
 .main{
@@ -205,20 +209,20 @@ header h2{
     
 }
 #proyectos{ 
-    min-height: 20vh;
+    min-height: 10vh;
     font-size: 3rem;
 }
 
 .jobs{
     text-align: center;
     box-shadow:  0 0 20px rgba( 0,0,0,0.1);
-    padding: 30px;
+    padding: 10px;
     background-color: var(--10);
     border-radius: 16px;
 }
 .jobs img{
     width: auto;
-    height: 170px;
+    height: 160px;
     margin-bottom:10px;
 }
 
@@ -288,6 +292,7 @@ header h2{
     padding: 25px;
     justify-content: space-around;
     align-items: center;
+    align-items: stretch;
     
 }
 .estudios{
@@ -342,17 +347,20 @@ header h2{
      
 }
 
-@media(max-width: 760px){
+@media(max-width: 768px){
     body{
         background-color: #e4d3d3;
         font-size: 16px;
         margin: 0;
         padding:0;
+        overflow-x: hidden;
     }
     .title{
         display: flex;
         font-size: 60px;
-    margin-left: 0;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
     }
     #text{
     display: flex;
@@ -374,6 +382,25 @@ header h2{
     #yo{
         display: none;
     }
+    .navbar{
+       display: flex;
+        top: 0; 
+        justify-content: space-evenly;
+        gap: 10px;
+        position: fixed;
+        width: 100%; 
+        height: 40px;
+        background: linear-gradient(to bottom, var(--5)80%, transparent 100%);
+    }
+    .navbar a{
+        color: var(--6);
+        text-decoration: none;
+        font-size: 14px;
+        gap: 2px;
+        margin-top: 10px;
+        margin-left: 5px; 
+        margin-right: 5px;
+    }
     
     .main{
         display: flex;
@@ -385,7 +412,7 @@ header h2{
         padding-left: 0;
     }
     #contact h3{
-       text-align: left;
+        text-align: left;
       margin: 0;
       padding: 0;
       width: 100%;
@@ -408,6 +435,45 @@ header h2{
     gap: 2px;
     text-shadow: 0 0 20px var(--6);
     margin-bottom: 2px;
+    margin-left: 10px;
+}
+#project{
+     display: grid;
+    justify-content: left;
+   
+    gap: 2px;
+    align-items: stretch;
+    width: 100%;
+    padding: 10px;
+}
+.project-img{
+     width: 130px;
+    height: 140px;
+    object-fit: cover;
+}
+.texto-encima{
+  
+    font-size: 15px;  
+}
+#studies .cursos{
+    display: grid;
+    justify-content: left;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    align-items: stretch;
+    width: 100%;
+    padding: 10px;
+   
+}
+.info{
+    width: 150px;
+    font-size: 15px;
+}
+.estudios img{
+    width: 150px;
+    height: 160px;
+    object-fit: cover;
+    
 }
 }
 
@@ -418,6 +484,7 @@ header h2{
         font-size: 14px;
         margin: 0;
         padding:0;
+        overflow-x: hidden;
     }
     .title{
         display: flex;
@@ -442,7 +509,24 @@ header h2{
     #yo{
         display: none;
     }
-    
+      .navbar{
+       display: flex;
+        top: 0; 
+        justify-content: space-evenly;
+        gap: 5px;
+        position: fixed;
+        width: 100%; 
+        height: 40px;
+        background: linear-gradient(to bottom, var(--5)80%, transparent 100%);
+    }
+    .navbar a{
+        color: var(--6);
+        text-decoration: none;
+        font-size: 12px;
+        margin-top: 2px;
+        margin-left: 3px; 
+        margin-right: 3px;
+    }
     .main{
         display: flex;
         flex-direction: column;
@@ -478,13 +562,42 @@ header h2{
     text-shadow: 0 0 20px var(--6);
     margin-bottom: 2px;
 }
-.jobs{
-    margin-right: 5px;
-
+#project{
+     display: flex;
+    justify-content: center;
+    gap: 2px;
+    align-items: stretch;
+    width: 100%;
+    padding: 2px;
+    margin: 2px;
 }
-.jobs img{
-     width: auto;
-    height: 140px;
-    margin-bottom:10px;
+.project-img{
+     width: 120px;
+    height: 130px;
+    object-fit: cover;
+}
+.texto-encima{
+  
+    font-size: 15px;  
+}
+#studies .cursos{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 2px;
+    align-items: stretch;
+    width: 100%;
+    padding: 20px;
+   
+}
+.info{
+    width: 150px;
+    font-size: 15px;
+}
+.estudios img{
+    width:180px;
+    height: 190px;
+    object-fit: cover;
+    
 }
 }
